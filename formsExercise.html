@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Exercise</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Customer Experience Survey</legend>
+            <div>
+                <label for="storeNumber">Store Number</label>
+                <select name="storeNumber" id="storeNumber">
+                    <!-- Have “Select A Store” display in the “Store Number” dropdown when the page loads. Also, when the dropdown is clicked do NOT display “Select A Store” as an option to select. -->
+                    <option hidden>Select a Store</option>
+                    <option value="3109">3109</option>
+                    <option value="2421">2421</option>
+                    <option value="5357">5357</option>
+                </select>
+            </div>
+
+            <fieldset>
+                <legend>When you visited:</legend>
+                    <!-- Set the range for “Date Visited” so that it must be within this year (AKA 2022) -->
+                    <div>
+                        <label for="dateVisited">Date Visited</label>
+                        <input type="date" id="dateVisited" name="dateVisited" min="2022-01-01" max="2022-12-31">
+                    </div>
+                    <div>
+                        <label for="">Time</label>
+                        <input type="time">
+                    </div>
+            </fieldset>
+            
+            <div>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" placeholder="Name" name="fullName">
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+    
+            <fieldset>
+                <legend>How would you rate your level of satisfaction with your visit?</legend>
+
+                <div>
+                    <input type="radio" id="satisfied" name="satLevel">
+                    <label for="satisfied">Satisfied</label>
+                </div>
+                <!-- Have “Neither Satisfied nor Dissatisfied” selected by default when the page loads-->
+                <div>
+                    <input type="radio" id="neitherSatNorDissat" name="satLevel" checked>
+                    <label for="neitherSatOrDissat">Neither Satisfied nor Dissatisfied</label>
+                </div>
+                <div>
+                    <input type="radio" id="dissatisfied" name="satLevel">
+                    <label for="dissatisfied">Dissatisfied</label>
+                </div>
+            </fieldset>
+
+            <div>
+                <label for="tellUs">Tell us about your experience:</label>
+                <br>
+                <textarea name="tellUs" id="tellUs" cols="20" rows="2"></textarea>
+            </div>
+            
+            <div>
+                <label for="timesVisited">Times visited in the last month:</label>
+                <br>
+                <!-- Set the range for “Times visited…” from 1 and 30 -->
+                <input type="number" id="timesVisited" name="timesVisited" min="1" max="30">
+            </div>
+
+            <div>
+                <!-- Set up the “Please check…” checkbox so that it needs to be checked for the form to be submitted -->
+                <input type="checkbox" name="contactConsent" id="contactConsent" required>
+                <label for="contactConsent">Please check the box if you would be willing to be contacted about your experience</label>
+            </div>
+
+            <!-- Create a password input below the checkbox input. Set a minimum and maximum length for the password input that is 5 and 10 characters. Also have the following message display when user has not met the minimum and maximum length requirements (HINT: Pattern)… -->
+            <div>
+                <input type="password" name="password" pattern=".{5,10}" title="Please enter a password that is 5 to 10 characters in length.">
+            </div>
+            
+
+            <!-- Include a Reset input before the Submit input at the bottom -->
+            <button type="reset">Reset</button>
+            <button>Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
