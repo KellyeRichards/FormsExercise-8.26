@@ -83,13 +83,13 @@
 
             <!-- Create a password input below the checkbox input. Set a minimum and maximum length for the password input that is 5 and 10 characters. Also have the following message display when user has not met the minimum and maximum length requirements (HINT: Pattern)… -->
             <div>
-                <input type="password" name="password" pattern=".{5,10}" title="Please enter a password that is 5 to 10 characters in length.">
+                <label for="password"Create a Password:></label>
+                <input type="password" name="password" id="password" pattern=".{5,10}" title="Please enter a password that is 5 to 10 characters in length.">
             </div>
             
-
             <!-- Include a Reset input before the Submit input at the bottom -->
             <button type="reset">Reset</button>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
         </fieldset>
     </form>
 </body>
